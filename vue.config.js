@@ -1,5 +1,21 @@
 module.exports = {
-  publicPath: "/portfolio/",
+  // publicPath: "/portfolio/",
+  // devServer: {
+
+  //   proxy: "https://mr-portfolio.glitch.me/contact",
+  // },
+
+  devServer: {
+    disableHostCheck: true,
+    proxy: {
+      "/contact": {
+        target: "https://mr-portfolio.glitch.me/",
+        ws: true,
+        changeOrigin: true,
+      },
+    },
+  },
+
   chainWebpack: (config) => {
     config.module
       .rule("pdf")

@@ -1,30 +1,23 @@
 <template>
   <header>
-    <!---<router-link to="/">Mathieu <strong>REVERSEZ</strong></router-link>-->
     <h1>
-      <a href="/">Mathieu <strong>REVERSEZ</strong></a>
+      <router-link to="/">Mathieu <strong>REVERSEZ</strong></router-link>
     </h1>
     <h2>
       Développeur Web <code>{{ front }}</code>
     </h2>
-
-    <nav>
-      <ul>
-        <li><a href="/competences">Compétences</a></li>
-        <li><a href="/projects">Mes projets</a></li>
-        <li><a href="/contact">Me contacter</a></li>
-        <li><a href="MathieuReversez-CV.pdf" download>Mon CV</a></li>
-      </ul>
-    </nav>
+    <Navigation />
   </header>
 </template>
 
 <script>
+import Navigation from "@/components/NavigationMenu";
 export default {
   name: "Header",
   data: () => ({
-    front: "< Front-End & Back-End />",
+    front: "<Front-End & Back-End/>",
   }),
+  components: { Navigation },
 };
 </script>
 
@@ -54,7 +47,7 @@ h2 {
 a {
   color: white;
   text-decoration: none;
-}
+} /* 
 nav {
   max-width: 100vw;
   position: relative;
@@ -102,16 +95,16 @@ li > a::before {
 li > a:hover::before {
   visibility: visible;
   transform: scaleX(1);
-}
+} */
 
 code {
   margin-left: 4%;
+  /* color: red; */
 }
 
 @media screen and (max-width: 40em) {
   header {
     margin: 1vh;
-    /* font-family: "Playfair Display", serif; */
     font-family: "PT Serif", serif;
     align-items: center;
     justify-content: center;
@@ -128,9 +121,6 @@ code {
   h2 {
     font-size: 1em;
     text-align: end;
-  }
-  nav {
-    display: none;
   }
 }
 </style>

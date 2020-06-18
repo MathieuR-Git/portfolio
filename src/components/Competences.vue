@@ -9,10 +9,10 @@
           :key="competence.title"
           :value="competence.value"
           :strokeColor="competence.color"
-          :title="competence.title"
         >
           <template v-slot:default>
-            <b :title="competence.title">
+            <router-link to="/contact" tag="b" :title="competence.title">
+              <!-- <b :title="competence.title"> -->
               <i
                 :class="competence.class"
                 v-bind:style="{ color: competence.color }"
@@ -20,7 +20,8 @@
               </i>
               <br />
               {{ competence.title }}
-            </b>
+              <!-- </b> -->
+            </router-link>
           </template>
         </Progress>
       </div>
@@ -35,7 +36,6 @@
           :key="competence.title"
           :value="competence.value"
           :strokeColor="competence.color"
-          :title="competence.title"
         >
           <template v-slot:default>
             <b :title="competence.title">
@@ -61,7 +61,6 @@
           :key="competence.title"
           :value="competence.value"
           :strokeColor="competence.color"
-          :title="competence.title"
         >
           <template v-slot:default>
             <b :title="competence.title">
@@ -138,7 +137,7 @@ export default {
         class: "fab fa-bootstrap fa-2x",
       },
       {
-        title: "MDB",
+        title: "MDBootstrap",
         value: 70,
         color: "#3788DB",
         class: "fab fa-mdb fa-2x",
@@ -301,10 +300,9 @@ hr {
   tranform: skew(30deg);
   /* border-radius: 20% 80% 30% 70%/70% 30% 70% 30%; */
 }
-.circle__svg {
-  cursor: pointer !important;
-}
-i, b {
+
+i,
+b {
   cursor: pointer;
 }
 </style>

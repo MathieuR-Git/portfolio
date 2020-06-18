@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Portfolio",
+    "description": "<p>Site web Portfolio </p>",
+    "classes": "VueJS CSS Javascript",
+    "technologies": [
+      {
+        "class1": "fab fa-vuejs",
+        "techno1": "VueJS",
+        "class2": "fab fa-css3-alt",
+        "techno2": "CSS",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Disponible",
+        "link": "/"
+      }
+    ],
+    "img": { "src": "Capture.jpg", "alt": "Portfolio" }
+  },
+  {
+    "name": "Pendu",
+    "description": "Jeu du Pendu créé pour travailler mes compétences",
+    "classes": "VueJS CSS Javascript React Bootstrap",
+    "technologies": [
+      {
+        "class1": "fab fa-vuejs",
+        "techno1": "VueJS",
+        "class2": "fab fa-css3-alt",
+        "techno2": "CSS",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Non fini"
+      },
+      {
+        "class1": "fab fa-react",
+        "techno1": "React",
+        "class2": "fab fa-bootstrap",
+        "techno2": "Bootstrap",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Non fini"
+      }
+    ],
+    "img": { "src": "Capture.jpg", "alt": "Pendu" }
+  },
+  {
+    "name": "To Do List",
+    "description": "<u title=\"Liste personnalisable qui s'adapte à tous les domaines d'activité\">To Do List</u> réalisé sur plusieurs technologies pour m'entraîner et approfondir mes connaissances.",
+    "classes": "VueJS CSS Javascript React Bootstrap HTML",
+    "technologies": [
+      {
+        "class1": "fab fa-vuejs",
+        "techno1": "VueJS",
+        "class2": "fab fa-css3-alt",
+        "techno2": "CSS",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Disponible",
+        "link": "/"
+      },
+      {
+        "class1": "fab fa-react",
+        "techno1": "React",
+        "class2": "fab fa-bootstrap",
+        "techno2": "Bootsrap",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Terminé"
+      },
+      {
+        "class1": "fab fa-html5",
+        "techno1": "HTML",
+        "class2": "fab fa-css3-alt",
+        "techno2": "CSS",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Terminé"
+      }
+    ],
+    "img": { "src": "Capture.jpg", "alt": "To Do List" }
+  },
+  {
+    "name": "Taureau - Vâche",
+    "description": "<p>Jeu du <u title=\"Jeu proche du Mastermind\">Taureau - Vâche</u> réalisé sur plusieurs technologies pour m'entraîner et approfondir mes connaissances.</p>",
+    "classes": "VueJS CSS Javascript React Bootstrap HTML",
+    "technologies": [
+      {
+        "class1": "fab fa-vuejs",
+        "techno1": "VueJS",
+        "class2": "fab fa-css3-alt",
+        "techno2": "CSS",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Disponible",
+        "link": "/"
+      },
+      {
+        "class1": "fab fa-react",
+        "techno1": "React",
+        "class2": "fab fa-bootstrap",
+        "techno2": "Bootsrap",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Terminé"
+      },
+      {
+        "class1": "fab fa-html5",
+        "techno1": "HTML",
+        "class2": "fab fa-css3-alt",
+        "techno2": "CSS",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Terminé"
+      }
+    ],
+    "img": { "src": "Capture.jpg", "alt": "Taureau-Vache" }
+  },
+  {
+    "name": "Agenda",
+    "description": "<h4>Petit projet d'Agenda réalisé en collaboration avec <a href=\"https://www.linkedin.com/in/florian-barth%C3%A9l%C3%A9my-689b1b187/\">Florian BARTHELEMY</a></h4><p>Projet d'Agenda créé au cours de ma formation de Développeur Full-Stack Javascript.</p>",
+    "classes": "Angular CSS Javascript",
+    "technologies": [
+      {
+        "class1": "fab fa-angular",
+        "techno1": "Angular",
+        "class2": "fab fa-css3-alt",
+        "techno2": "CSS",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Terminé"
+      }
+    ],
+    "img": { "src": "Agenda.jpg", "alt": "Agenda" }
+  },
+  {
+    "name": "Enterprise Learning Management ",
+    "description": "<p>Portail créé lors du stage de fin de formation fin 2019 pour l'<a href=\"http://insy2s.com/\" class=\"insy2s\">ESN Insy2s</a>.</p>",
+    "classes": "React MDBoostrap Javascript",
+    "technologies": [
+      {
+        "class1": "fab fa-react",
+        "techno1": "React",
+        "class2": "fab fa-mdb",
+        "techno2": "MDBootsrap",
+        "class3": "fab fa-js-square",
+        "techno3": "Javascript",
+        "status": "Terminé"
+      }
+    ],
+    "img": { "src": "ELM.jpg", "alt": "ELM" }
+  }
+]

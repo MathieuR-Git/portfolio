@@ -3,7 +3,12 @@
 ## Fait :
 
 - Responsive header
+- Navbar version mobile
 
 ## A faire :
 
-- Navbar version mobile
+- Corriger la disparition temporaire du burger button
+- Pour chaque compétence, faire une redirection expliquant ce que c'est et les projets fait avec ?
+- dans les projets, faire une filtrage par techno (boutons + barre de recherche?)
+
+-Pour filter : - créer une classe css - quand je clique, retire la classe à tous, et ajoute à l'élément cliqué, puis filter

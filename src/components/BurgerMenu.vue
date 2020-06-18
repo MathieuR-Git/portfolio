@@ -1,40 +1,154 @@
 <template>
   <div>
-    <img src="profile.jpg" />
+     <img src="profile.jpg" alt="Ma photo" /> 
     <div>
-      <nav>
+      <nav v-if="this.$route.path == '/'">
         <div class="nav-icon" ref="navIcon" @click="letsgo">
           <div></div>
         </div>
         <transition name="slide-fade" key="whoiam">
           <div class="sub-menu" v-if="show">
-            <a href="/competences" class="whoiam">
+            <router-link to="/competences" class="one">
               <i class="fas fa-info-circle fa-2x"></i>
               <span>Compétences</span>
-            </a>
+            </router-link>
           </div>
         </transition>
         <transition name="slide-fade" key="projects">
           <div class="sub-menu" v-if="show">
-            <a href="/projects" class="projects">
+            <router-link to="/projects" class="two">
               <i class="fa fa-code fa-2x"></i>
-
               <span>Mes projets</span>
-            </a>
+            </router-link>
           </div>
         </transition>
-        <transition name="slide-fade" key="contact">
+        <transition name="slide-fade" key="home">
           <div class="sub-menu" v-if="show">
-            <a href="/contact" class="contact">
-              <i class="fa fa-comment  fa-2x"></i>
+            <router-link to="/contact" class="three">
+              <i class="fa fa-home  fa-2x"></i>
               <span>Me contacter</span>
-            </a>
+            </router-link>
           </div>
         </transition>
+
         <transition name="slide-fade" key="cv">
           <div class="sub-menu" v-if="show">
-            <a href="MathieuReversez-CV.pdf" class="cv" download>
-              <!-- <a src="~assets/pdf/cv.pdf"  download>-->
+            <a href="MathieuReversez-CV.pdf" class="four" download>
+              <i class="fa fa-file  fa-2x"></i>
+              <span>Mon CV</span>
+            </a>
+          </div>
+        </transition>
+      </nav>
+      <nav v-else-if="this.$route.path == '/competences'">
+        <div class="nav-icon" ref="navIcon" @click="letsgo">
+          <div></div>
+        </div>
+        <transition name="slide-fade" key="home">
+          <div class="sub-menu" v-if="show">
+            <router-link to="/" class="one">
+              <i class="fa fa-home  fa-2x"></i>
+              <span>Accueil</span>
+            </router-link>
+          </div>
+        </transition>
+        <transition name="slide-fade" key="projects">
+          <div class="sub-menu" v-if="show">
+            <router-link to="/projects" class="two">
+              <i class="fa fa-code fa-2x"></i>
+              <span>Mes projets</span>
+            </router-link>
+          </div>
+        </transition>
+        <transition name="slide-fade" key="home">
+          <div class="sub-menu" v-if="show">
+            <router-link to="/contact" class="three">
+              <i class="fa fa-home  fa-2x"></i>
+              <span>Me contacter</span>
+            </router-link>
+          </div>
+        </transition>
+
+        <transition name="slide-fade" key="cv">
+          <div class="sub-menu" v-if="show">
+            <a href="MathieuReversez-CV.pdf" class="four" download>
+              <i class="fa fa-file  fa-2x"></i>
+              <span>Mon CV</span>
+            </a>
+          </div>
+        </transition>
+      </nav>
+      <nav v-else-if="this.$route.path == '/projects'">
+        <div class="nav-icon" ref="navIcon" @click="letsgo">
+          <div></div>
+        </div>
+        <transition name="slide-fade" key="home">
+          <div class="sub-menu" v-if="show">
+            <router-link to="/" class="one">
+              <i class="fa fa-home  fa-2x"></i>
+              <span>Accueil</span>
+            </router-link>
+          </div>
+        </transition>
+        <transition name="slide-fade" key="whoiam">
+          <div class="sub-menu" v-if="show">
+            <router-link to="/competences" class="two">
+              <i class="fas fa-info-circle fa-2x"></i>
+              <span>Compétences</span>
+            </router-link>
+          </div>
+        </transition>
+
+        <transition name="slide-fade" key="contact">
+          <div class="sub-menu" v-if="show">
+            <router-link to="/contact" class="three">
+              <i class="fa fa-home  fa-2x"></i>
+              <span>Me contacter</span>
+            </router-link>
+          </div>
+        </transition>
+
+        <transition name="slide-fade" key="cv">
+          <div class="sub-menu" v-if="show">
+            <a href="MathieuReversez-CV.pdf" class="four" download>
+              <i class="fa fa-file  fa-2x"></i>
+              <span>Mon CV</span>
+            </a>
+          </div>
+        </transition>
+      </nav>
+      <nav v-else>
+        <div class="nav-icon" ref="navIcon" @click="letsgo">
+          <div></div>
+        </div>
+        <transition name="slide-fade" key="home">
+          <div class="sub-menu" v-if="show">
+            <router-link to="/" class="one">
+              <i class="fa fa-home  fa-2x"></i>
+              <span>Accueil</span>
+            </router-link>
+          </div>
+        </transition>
+        <transition name="slide-fade" key="whoiam">
+          <div class="sub-menu" v-if="show">
+            <router-link to="/competences" class="two">
+              <i class="fas fa-info-circle fa-2x"></i>
+              <span>Compétences</span>
+            </router-link>
+          </div>
+        </transition>
+        <transition name="slide-fade" key="projects">
+          <div class="sub-menu" v-if="show">
+            <router-link to="/projects" class="three">
+              <i class="fa fa-code fa-2x"></i>
+              <span>Mes projets</span>
+            </router-link>
+          </div>
+        </transition>
+
+        <transition name="slide-fade" key="cv">
+          <div class="sub-menu" v-if="show">
+            <a href="MathieuReversez-CV.pdf" class="four" download>
               <i class="fa fa-file  fa-2x"></i>
               <span>Mon CV</span>
             </a>
@@ -104,7 +218,7 @@ img {
 }
 nav {
   position: absolute;
-  top: 60px;
+  top: 68px;
   right: 20px;
 }
 
@@ -124,10 +238,15 @@ nav {
   animation: fadeout 1s linear; /* IE 10+, Fx 29+ */
   z-index: 200;
 }
-.nav-icon {
+div nav .nav-icon {
+  opacity: 1 !important;
   width: 40px;
   z-index: 99;
 }
+/* .nav-icon {
+  width: 40px;
+  z-index: 99;
+} */
 
 .nav-icon:after,
 .nav-icon:before,
@@ -161,7 +280,7 @@ nav {
   z-index: 99;
 }
 
-.whoiam {
+.one {
   position: absolute;
   top: 0px;
   left: -160px;
@@ -173,7 +292,7 @@ nav {
   cursor: pointer;
 }
 
-.projects {
+.two {
   position: absolute;
   top: 80px;
   left: -138.6px;
@@ -184,7 +303,7 @@ nav {
   text-align: center;
   cursor: pointer;
 }
-.contact {
+.three {
   position: absolute;
   top: 138.6px;
   left: -85px;
@@ -195,7 +314,7 @@ nav {
   text-align: center;
   cursor: pointer;
 }
-.cv {
+.four {
   position: absolute;
   top: 160px;
   left: 20px;
