@@ -48,7 +48,7 @@
           <div class="sub-menu" v-if="show">
             <router-link to="/" class="one">
               <i class="fa fa-home  fa-2x"></i>
-              <span>Accueil</span>
+              <span>Qui suis-je ?</span>
             </router-link>
           </div>
         </transition>
@@ -86,7 +86,7 @@
           <div class="sub-menu" v-if="show">
             <router-link to="/" class="one">
               <i class="fa fa-home  fa-2x"></i>
-              <span>Accueil</span>
+              <span>Qui suis-je ?</span>
             </router-link>
           </div>
         </transition>
@@ -125,7 +125,7 @@
           <div class="sub-menu" v-if="show">
             <router-link to="/" class="one">
               <i class="fa fa-home  fa-2x"></i>
-              <span>Accueil</span>
+              <span>Qui suis-je ?</span>
             </router-link>
           </div>
         </transition>

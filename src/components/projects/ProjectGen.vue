@@ -60,6 +60,7 @@ img {
 
 .project>p:first-of-type{
   text-align: center;
+
 }
 @media screen and (min-width: 40em) {
   .project {

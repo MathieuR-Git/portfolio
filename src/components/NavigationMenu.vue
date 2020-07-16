@@ -2,7 +2,7 @@
   <nav>
     <ul v-if="this.$route.path == '/'">
       <li>
-        <router-link to="/competences" tag="a">Compétences</router-link>
+        <router-link to="/competences" tag="a">Mes compétences</router-link>
       </li>
       <li><router-link to="/projects" tag="a">Mes projets</router-link></li>
       <li><router-link to="/contact" tag="a">Me contacter</router-link></li>
@@ -11,20 +11,27 @@
       </li>
     </ul>
     <ul v-else-if="this.$route.path == '/competences'">
-      <li><router-link to="/" tag="a">Accueil</router-link></li>
+      <li><router-link to="/" tag="a">Qui suis-je ?</router-link></li>
+      <!--<li><router-link to="/" tag="a">Accueil</router-link></li>-->
       <li><router-link to="/projects" tag="a">Mes projets</router-link></li>
       <li><router-link to="/contact" tag="a">Me contacter</router-link></li>
       <li><a href="MathieuReversez-CV.pdf" download>Mon CV</a></li>
     </ul>
     <ul v-else-if="this.$route.path == '/projects'">
-      <li><router-link to="/" tag="a">Accueil</router-link></li>
-      <li><router-link to="/competences" tag="a">Compétences</router-link></li>
+      <li><router-link to="/" tag="a">Qui suis-je ?</router-link></li>
+      <!--<li><router-link to="/" tag="a">Accueil</router-link></li>-->
+      <li>
+        <router-link to="/competences" tag="a">Mes compétences</router-link>
+      </li>
       <li><router-link to="/contact" tag="a">Me contacter</router-link></li>
       <li><a href="MathieuReversez-CV.pdf" download>Mon CV</a></li>
     </ul>
     <ul v-else>
-      <li><router-link to="/" tag="a">Accueil</router-link></li>
-      <li><router-link to="/competences" tag="a">Compétences</router-link></li>
+      <li><router-link to="/" tag="a">Qui suis-je ?</router-link></li>
+      <!--<li><router-link to="/" tag="a">Accueil</router-link></li>-->
+      <li>
+        <router-link to="/competences" tag="a">Mes compétences</router-link>
+      </li>
       <li><router-link to="/projects" tag="a">Mes projets</router-link></li>
       <li><a href="MathieuReversez-CV.pdf" download>Mon CV</a></li>
     </ul>
@@ -63,14 +70,15 @@ li {
   & a {
     position: relative;
     text-decoration: none;
-    color: white;
+    color: black;
+    // color: white;
     text-decoration: none;
     padding-bottom: 3px;
     cursor: pointer;
     transition: color 1000ms, transform 450ms;
     &:hover {
-      color: aqua;
-
+      color: red;
+      transform: scale(1.4);
       &::before {
         visibility: visible;
         transform: scaleX(1.4);
@@ -85,7 +93,7 @@ li {
       bottom: 0;
       left: 10%;
       width: 80%;
-      background-color: aqua;
+      background-color: rgb(18, 69, 89);
       visibility: hidden;
       transform: scaleX(0);
       transition: all 0.3s ease-in-out 0s;

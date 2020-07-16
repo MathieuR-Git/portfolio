@@ -1,82 +1,89 @@
 <template>
-  <article id="competences">
-    <section>
-      <h1>Front-End</h1>
-      <div id="frontend">
-        <Progress
-          :radius="50"
-          v-for="competence in competencesfront"
-          :key="competence.title"
-          :value="competence.value"
-          :strokeColor="competence.color"
-        >
-          <template v-slot:default>
-            <router-link to="/contact" tag="b" :title="competence.title">
-              <!-- <b :title="competence.title"> -->
-              <i
-                :class="competence.class"
-                v-bind:style="{ color: competence.color }"
-              >
-              </i>
-              <br />
-              {{ competence.title }}
-              <!-- </b> -->
-            </router-link>
-          </template>
-        </Progress>
-      </div>
-    </section>
-    <hr />
-    <section>
-      <h1>Back-End</h1>
-      <div id="backend">
-        <Progress
-          :radius="50"
-          v-for="competence in competencesback"
-          :key="competence.title"
-          :value="competence.value"
-          :strokeColor="competence.color"
-        >
-          <template v-slot:default>
-            <b :title="competence.title">
-              <i
-                :class="competence.class"
-                v-bind:style="{ color: competence.color }"
-              >
-              </i>
-              <br />
-              {{ competence.title }}
-            </b>
-          </template>
-        </Progress>
-      </div>
-    </section>
-    <hr />
-    <section>
-      <h1>Autres</h1>
-      <div id="other">
-        <Progress
-          :radius="50"
-          v-for="competence in autres"
-          :key="competence.title"
-          :value="competence.value"
-          :strokeColor="competence.color"
-        >
-          <template v-slot:default>
-            <b :title="competence.title">
-              <i
-                :class="competence.class"
-                v-bind:style="{ color: competence.color }"
-              >
-              </i>
-              <br />
-              {{ competence.title }}
-            </b>
-          </template>
-        </Progress>
-      </div>
-    </section>
-  </article>
+  <div>
+    <h1>Mes compétences</h1>
+    <article id="competences">
+      <section>
+        <h1>Front-End</h1>
+        <div id="frontend">
+          <Progress
+            :radius="50"
+            v-for="competence in competencesfront"
+            :key="competence.title"
+            :value="competence.value"
+            :strokeColor="competence.color"
+          >
+            <template v-slot:default>
+              <!-- <router-link to="/contact" tag="b" :title="competence.title"> -->
+              <b :title="competence.title">
+                <i
+                  :class="competence.class"
+                  v-bind:style="{ color: competence.color }"
+                >
+                </i>
+                <br />
+                {{ competence.title }}
+              </b>
+              <!-- </router-link> -->
+            </template>
+          </Progress>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <h1>Back-End</h1>
+        <div id="backend">
+          <Progress
+            :radius="50"
+            v-for="competence in competencesback"
+            :key="competence.title"
+            :value="competence.value"
+            :strokeColor="competence.color"
+          >
+            <template v-slot:default>
+              <b :title="competence.title">
+                <i
+                  :class="competence.class"
+                  v-bind:style="{ color: competence.color }"
+                >
+                </i>
+                <br />
+                {{ competence.title }}
+              </b>
+            </template>
+          </Progress>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <h1>Autres</h1>
+        <div id="other">
+          <Progress
+            :radius="50"
+            v-for="competence in autres"
+            :key="competence.title"
+            :value="competence.value"
+            :strokeColor="competence.color"
+          >
+            <template v-slot:default>
+              <b :title="competence.title">
+                <i
+                  :class="competence.class"
+                  v-bind:style="{ color: competence.color }"
+                >
+                </i>
+                <br />
+                {{ competence.title }}
+              </b>
+            </template>
+          </Progress>
+        </div>
+      </section>
+    </article>
+    <article>
+      <h1>Mes certifications</h1>
+      <section>En cours</section>
+    </article>
+  </div>
 </template>
 
 <script>
@@ -196,14 +203,21 @@ export default {
 <style lang="css" scoped>
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
 #competences {
-  background: #3e423a;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  background: rgba(62, 66, 58, 0.7);
+  border: 1px solid black;
+  border-radius: 5px;
+  /*background: #3e423a;*/
   min-height: 100vh;
   padding: 2vh;
+  padding-bottom: 4vh;
 }
 h1 {
   position: relative;
   font-family: "PT Serif", serif;
-  color: white;
+  /* color: white; */
+  color: black;
   font-size: 1.4rem;
   text-align: center;
   margin: 4vh auto;
@@ -228,10 +242,10 @@ h1 {
   align-content: stretch;
   justify-content: center;
   align-items: center;
-  border-left: inset 4px white;
-  border-top: inset 4px white;
-  border-right: solid 1px white;
-  border-bottom: solid 1px white;
+  border-left: inset 4px #00ffff;
+  border-top: inset 4px #00ffff;
+  border-right: solid 1px #00ffff;
+  border-bottom: solid 1px #00ffff;
   border-radius: 10px;
 }
 
@@ -253,10 +267,10 @@ h1 {
   align-content: stretch;
   justify-content: center;
   align-items: center;
-  border-left: inset 4px white;
-  border-top: inset 4px white;
-  border-right: solid 1px white;
-  border-bottom: solid 1px white;
+  border-left: inset 4px #00ffff;
+  border-top: inset 4px #00ffff;
+  border-right: solid 1px #00ffff;
+  border-bottom: solid 1px #00ffff;
   border-radius: 10px;
 }
 #other > .vue-circular-progress {
@@ -277,10 +291,10 @@ h1 {
   align-content: stretch;
   justify-content: center;
   align-items: center;
-  border-left: inset 4px white;
-  border-top: inset 4px white;
-  border-right: solid 1px white;
-  border-bottom: solid 1px white;
+  border-left: inset 4px #00ffff;
+  border-top: inset 4px #00ffff;
+  border-right: solid 1px #00ffff;
+  border-bottom: solid 1px #00ffff;
   border-radius: 10px;
   overflow-wrap: anywhere;
 }
@@ -292,8 +306,9 @@ hr {
   margin-top: 4vh;
   /*background-color: black; */
   /* color: black; */
-  border: solid 3px rgb(203, 207, 207);
-  /* height: 1px; */
+  border: solid 2px #00ffff;
+  /* border: solid 2px rgb(203, 207, 207); */
+  height: 1px;
   -webkit-transform: skew(30deg);
   -moz-transform: skew(30deg);
   -o-transform: skew(30deg);

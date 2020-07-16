@@ -83,7 +83,10 @@ body {
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  background-color: rgb(23, 24, 26);
+  /*background-color: rgb(23, 24, 26);*/
+  /*background-color: #6a89cc;*/
+  /*background-color: #c4c6c8;*/
+  background-color: #EFF6E0;
   min-height: 100vh;
   scroll-behavior: smooth;
 }

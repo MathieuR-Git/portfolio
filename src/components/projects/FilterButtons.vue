@@ -1,11 +1,17 @@
 <template>
   <div>
-    <button value="all" @click="filterProject">Tous</button>
+    <span value="all" @click="filterProject">Tous</span>
+    <span value="VueJS" @click="filterProject">VueJS</span>
+    <span value="React" @click="filterProject">React</span>
+    <span value="Angular" @click="filterProject">Angular</span>
+    <span value="HTML" @click="filterProject">HTML</span>
+    <span value="Bootstrap" @click="filterProject">Bootstrap</span>
+    <!-- <button value="all" @click="filterProject">Tous</button>
     <button value="VueJS" @click="filterProject">VueJS</button>
     <button value="React" @click="filterProject">React</button>
     <button value="Angular" @click="filterProject">Angular</button>
     <button value="HTML" @click="filterProject">HTML</button>
-    <button value="Bootstrap" @click="filterProject">Bootstrap</button>
+    <button value="Bootstrap" @click="filterProject">Bootstrap</button> -->
   </div>
 </template>
 
@@ -15,7 +21,9 @@ export default {
   methods: {
     filterProject: function(e) {
       const allProjects = document.getElementsByClassName("project");
-      const allButtons = document.getElementsByTagName("button");
+      const allButtons =
+        document.getElementsByTagName("button") ||
+        document.getElementsByTagName("span");
 
       //INACTIVE PART
       if (e.target.classList.contains("active")) {
@@ -136,7 +144,8 @@ export default {
       display: block;
       position: absolute;
       width: 10%;
-      background: #222;
+      background: transparent;
+      // background: #222;
       height: 0.3em;
       left: 20%;
       bottom: -0.25em;
@@ -162,16 +171,16 @@ export default {
     justify-content: center;
     padding: 5%;
   }
-  button {
+  span {
     position: relative;
     background: none;
     cursor: pointer;
-    color: aqua;
+    color: #495867;
     text-transform: uppercase;
     text-decoration: none;
     margin: 1em;
 
-    border: 0.2em solid aqua;
+    border: 0.2em solid #495867;
     padding: 0.5em 1em;
     transition: transform 450ms, border-radius 350ms, border-color 450ms,
       color 450ms;
@@ -180,7 +189,8 @@ export default {
       display: block;
       position: absolute;
       width: 10%;
-      background: #222;
+      background: #eff6e0;
+      // background: #222;
       height: 0.3em;
       right: 20%;
       top: -0.21em;
@@ -193,7 +203,7 @@ export default {
       display: block;
       position: absolute;
       width: 10%;
-      background: #222;
+      background: #eff6e0;
       height: 0.3em;
       left: 20%;
       bottom: -0.25em;
@@ -204,8 +214,8 @@ export default {
     &:hover {
       transform: scale(1.15);
       border-radius: 10px;
-      border-color: white;
-      color: white;
+      border-color: black;
+      color: black;
       &::before {
         right: 80%;
       }

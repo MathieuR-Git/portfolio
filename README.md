@@ -10,5 +10,9 @@
 - Corriger la disparition temporaire du burger button
 - Pour chaque compétence, faire une redirection expliquant ce que c'est et les projets fait avec ?
 - dans les projets, faire une filtrage par techno (boutons + barre de recherche?)
+- retravailler couleurs (style années 80 actuellement)
+- page certif
+- changer couleurs animations
+- filterbuttons en span -> récupération value
 
--Pour filter : - créer une classe css - quand je clique, retire la classe à tous, et ajoute à l'élément cliqué, puis filter
+-
